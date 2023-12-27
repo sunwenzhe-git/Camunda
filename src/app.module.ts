@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Client, logger } from 'camunda-external-task-client-js';
 
-const config = { baseUrl: 'http://127.0.0.1:8080/engine-rest', use: logger, asyncResponseTimeout: 10000 };
+const config = { baseUrl: 'https://caa5-2408-8340-1420-f1a0-6191-5b1c-df69-6348.ngrok-free.app/engine-rest', use: logger, asyncResponseTimeout: 10000 };
 const client = new Client(config);
 
 @Module({
