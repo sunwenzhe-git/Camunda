@@ -32,4 +32,4 @@ jobs:
           -F "enable-duplicate-filtering=true" \
           -F "deploy-changed-only=true" \
           -F "${{ github.event.inputs.bpmn_file_name }}.bpmn=./bpmn/${{ github.event.inputs.bpmn_file_name }}.bpmn" \
-          https://shaky-parks-nail.loca.lt/engine-rest/deployment/create
+          https://free-files-say.loca.lt/engine-rest/deployment/create
