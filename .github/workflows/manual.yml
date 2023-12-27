@@ -32,4 +32,4 @@ jobs:
           -F "enable-duplicate-filtering=true" \
           -F "deploy-changed-only=true" \
           -F "data=@./bpmn/${{ github.event.inputs.bpmn_file_name }}.bpmn" \
-          https://free-files-say.loca.lt/engine-rest/deployment/create
+          https://caa5-2408-8340-1420-f1a0-6191-5b1c-df69-6348.ngrok-free.app/engine-rest/deployment/create
