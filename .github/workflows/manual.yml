@@ -31,5 +31,5 @@ jobs:
           -F "deployment-name=${{ github.event.inputs.bpmn_file_name }}" \
           -F "enable-duplicate-filtering=true" \
           -F "deploy-changed-only=true" \
-          -F "${{ github.event.inputs.bpmn_file_name }}.bpmn=./bpmn/${{ github.event.inputs.bpmn_file_name }}.bpmn" \
+          -F "data=@./bpmn/${{ github.event.inputs.bpmn_file_name }}.bpmn" \
           https://free-files-say.loca.lt/engine-rest/deployment/create
