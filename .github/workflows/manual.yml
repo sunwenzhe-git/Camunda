@@ -19,6 +19,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install Zeebe client tools
+        run: npm install -g zbctl
+
       - name: Upload BPMN artifact
         uses: actions/upload-artifact@v2
         with:
