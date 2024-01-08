@@ -14,14 +14,16 @@ const zbc = new ZB.ZBClient({
     clusterId: 'd748db5f-f16e-4e50-9f85-c38423a8b8e0',
     clientId: 'hElxlz4k5mDNhbdCCTLWPpQ2ko8XEbBH',
     clientSecret: 'OQE24Q93o-BTYkfdg79QB.-Iyd_RAZoOkTcbxI4KyLe8Bie4kfbd98P52e~pN~Rt',
+    clusterRegion: 'syd-1'
   },
+  connectionTolerance: 5000,
   onReady: () => console.log('Connected'),
   onConnectionError() {
     console.log('Disconnected')
   },
 });
+
 @Module({
-  imports: [],
   controllers: [AppController],
   providers: [AppService],
 })

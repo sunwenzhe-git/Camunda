@@ -27,9 +27,5 @@ jobs:
 
       - name: Deploy process to Camunda
         run: |
-          curl -X POST -H "Content-Type: multipart/form-data" \
-          -F "deployment-name=${{ github.event.inputs.bpmn_file_name }}" \
-          -F "enable-duplicate-filtering=true" \
-          -F "deploy-changed-only=true" \
-          -F "data=@./bpmn/${{ github.event.inputs.bpmn_file_name }}.bpmn" \
-          https://caa5-2408-8340-1420-f1a0-6191-5b1c-df69-6348.ngrok-free.app/engine-rest/deployment/create
+          zbctl deploy resource ${{ github.event.inputs.bpmn_file_name }}.bpmn --address 'd748db5f-f16e-4e50-9f85-c38423a8b8e0.syd-1.zeebe.camunda.io:443' --clientId 'hElxlz4k5mDNhbdCCTLWPpQ2ko8XEbBH' --clientSecret 'OQE24Q93o-BTYkfdg79QB.-Iyd_RAZoOkTcbxI4KyLe8Bie4kfbd98P52e~pN~Rt' --authorizationServerUrl 'https://login.cloud.camunda.io/oauth/token'
+        working-directory: ./bpmn
